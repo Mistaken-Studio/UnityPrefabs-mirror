@@ -1003,7 +1003,7 @@ GameObject:
   - component: {fileID: 852843584345241183}
   - component: {fileID: 1543462446445283965}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Door (Join:1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1616,7 +1616,6 @@ Transform:
   - {fileID: 3611037187888811493}
   - {fileID: 5820563940315865480}
   - {fileID: 2348927590455803038}
-  - {fileID: 5785286746759464992}
   m_Father: {fileID: 852843584345241183}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1643,13 +1642,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4826941256639530011}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.45, y: 1.25, z: -0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3979179364752630397}
-  m_Father: {fileID: 9063347987260040710}
-  m_RootOrder: 8
+  m_Father: {fileID: 9057106238339918188}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5227267427962013488
 GameObject:
@@ -2790,7 +2789,7 @@ PrefabInstance:
     - target: {fileID: 4862688196408780579, guid: 306f49f05fab41041b291a54299d8f78,
         type: 3}
       propertyPath: m_Name
-      value: HCZ_DOOR
+      value: HCZ_DOOR (Join:1|OneTime)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 306f49f05fab41041b291a54299d8f78, type: 3}

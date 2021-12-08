@@ -11550,7 +11550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6652246539201642627}
   m_Layer: 0
-  m_Name: Surface_GateA_MiddleTower
+  m_Name: Surface_GateA_Middle_Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

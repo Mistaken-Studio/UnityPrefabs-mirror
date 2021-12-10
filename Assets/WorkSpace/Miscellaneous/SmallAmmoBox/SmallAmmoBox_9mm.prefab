@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 374119211428089782}
   - component: {fileID: 3767007602936577902}
   m_Layer: 0
-  m_Name: Opening
+  m_Name: Opening (Join:1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1128,7 +1128,7 @@ PrefabInstance:
     - target: {fileID: 4248994986871547568, guid: 19505e7259e311043a6f3c4eff4573b3,
         type: 3}
       propertyPath: m_Name
-      value: Spawn_Ammo9mm_30
+      value: Spawn_Ammo9x19_30
       objectReference: {fileID: 0}
     - target: {fileID: 5734941032760284059, guid: 19505e7259e311043a6f3c4eff4573b3,
         type: 3}
@@ -1203,7 +1203,7 @@ PrefabInstance:
     - target: {fileID: 4248994986871547568, guid: 19505e7259e311043a6f3c4eff4573b3,
         type: 3}
       propertyPath: m_Name
-      value: Spawn_Ammo9mm_30 (2)
+      value: Spawn_Ammo9x19_30
       objectReference: {fileID: 0}
     - target: {fileID: 5734941032760284059, guid: 19505e7259e311043a6f3c4eff4573b3,
         type: 3}
@@ -1368,7 +1368,7 @@ PrefabInstance:
     - target: {fileID: 4248994986871547568, guid: 19505e7259e311043a6f3c4eff4573b3,
         type: 3}
       propertyPath: m_Name
-      value: Spawn_Ammo9mm_30 (1)
+      value: Spawn_Ammo9x19_30
       objectReference: {fileID: 0}
     - target: {fileID: 5734941032760284059, guid: 19505e7259e311043a6f3c4eff4573b3,
         type: 3}

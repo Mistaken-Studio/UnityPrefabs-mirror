@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 5181998086953875133}
   - component: {fileID: 8546738945798129253}
   m_Layer: 0
-  m_Name: Opening
+  m_Name: Opening (Join:1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

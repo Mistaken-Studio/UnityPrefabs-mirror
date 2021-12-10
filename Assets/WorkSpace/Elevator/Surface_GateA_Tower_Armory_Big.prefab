@@ -2117,7 +2117,7 @@ PrefabInstance:
     - target: {fileID: 5954888181480306411, guid: 8775a8a4dfec640439983f24b8bcf144,
         type: 3}
       propertyPath: m_Name
-      value: Spawn_GunCossvec_Random (2)
+      value: Spawn_GunCrossvec_Random
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8775a8a4dfec640439983f24b8bcf144, type: 3}
@@ -2289,6 +2289,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6521286760296743647}
     m_Modifications:
+    - target: {fileID: 58523610377055613, guid: 36980826ad459944cac503f98721e4a6,
+        type: 3}
+      propertyPath: m_Name
+      value: Opening (Join:2)
+      objectReference: {fileID: 0}
     - target: {fileID: 4808129256189768893, guid: 36980826ad459944cac503f98721e4a6,
         type: 3}
       propertyPath: m_Name
@@ -2302,17 +2307,17 @@ PrefabInstance:
     - target: {fileID: 8096632977296715383, guid: 36980826ad459944cac503f98721e4a6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.387
+      value: 1.882
       objectReference: {fileID: 0}
     - target: {fileID: 8096632977296715383, guid: 36980826ad459944cac503f98721e4a6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03
+      value: 0.652
       objectReference: {fileID: 0}
     - target: {fileID: 8096632977296715383, guid: 36980826ad459944cac503f98721e4a6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.158
+      value: 1.051
       objectReference: {fileID: 0}
     - target: {fileID: 8096632977296715383, guid: 36980826ad459944cac503f98721e4a6,
         type: 3}
@@ -2348,6 +2353,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400091507623063914, guid: 36980826ad459944cac503f98721e4a6,
+        type: 3}
+      propertyPath: m_Name
+      value: HCZ_DOOR (Join:2|OneTime)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36980826ad459944cac503f98721e4a6, type: 3}
@@ -2927,7 +2937,7 @@ PrefabInstance:
     - target: {fileID: 5954888181480306411, guid: 8775a8a4dfec640439983f24b8bcf144,
         type: 3}
       propertyPath: m_Name
-      value: Spawn_GunCossvec_Random (3)
+      value: Spawn_GunCrossvec_Random
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8775a8a4dfec640439983f24b8bcf144, type: 3}
@@ -3152,7 +3162,7 @@ PrefabInstance:
     - target: {fileID: 5954888181480306411, guid: 8775a8a4dfec640439983f24b8bcf144,
         type: 3}
       propertyPath: m_Name
-      value: Spawn_GunCossvec_Random
+      value: Spawn_GunCrossvec_Random
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8775a8a4dfec640439983f24b8bcf144, type: 3}
@@ -3596,7 +3606,7 @@ PrefabInstance:
     - target: {fileID: 5954888181480306411, guid: 8775a8a4dfec640439983f24b8bcf144,
         type: 3}
       propertyPath: m_Name
-      value: Spawn_GunCossvec_Random (1)
+      value: Spawn_GunCrossvec_Random
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8775a8a4dfec640439983f24b8bcf144, type: 3}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1289295498}
   - component: {fileID: 1289295497}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Quadd (ignore)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

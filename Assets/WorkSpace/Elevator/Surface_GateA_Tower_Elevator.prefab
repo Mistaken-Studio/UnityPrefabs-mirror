@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3578438451082886012}
+  - component: {fileID: 7972042434772716209}
+  - component: {fileID: 5558111067628776756}
   m_Layer: 0
   m_Name: Surface_GateA_Tower_Elevator
   m_TagString: Untagged
@@ -32,6 +34,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7972042434772716209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3578438451082886013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0d8c25e9332c44f85ba0dd2b208dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 8
+--- !u!114 &5558111067628776756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3578438451082886013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df9c4068aa00e74288420e62c0c37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawn: 1
+  Room: 48
+  MaxAmount: 1
+  MinAmount: 1
+  Chance: 0
+  ColidingAssetTypes: 
 --- !u!1001 &4509548212677408205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99,7 +132,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6042471966723341764, guid: 6d2e1f0a134eaff48b13902a4b7120a6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6d2e1f0a134eaff48b13902a4b7120a6, type: 3}
 --- !u!4 &4890163851141641245 stripped
 Transform:
@@ -174,7 +208,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6694359804207293130, guid: b07e9234045012145aefacad0919dbf7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b07e9234045012145aefacad0919dbf7, type: 3}
 --- !u!4 &201904948377741343 stripped
 Transform:

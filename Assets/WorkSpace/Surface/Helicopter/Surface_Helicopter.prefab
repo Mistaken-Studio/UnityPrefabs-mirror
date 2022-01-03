@@ -3206,6 +3206,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7542994543034699387}
   - component: {fileID: 1218596713}
+  - component: {fileID: 1113694884}
+  - component: {fileID: 2129359530500137583}
   m_Layer: 0
   m_Name: Surface_Helicopter
   m_TagString: Untagged
@@ -3249,6 +3251,40 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1113694884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7542994543034699380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc8cd43d66e6f143bb2d825acb47feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2129359530500137583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7542994543034699380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0d8c25e9332c44f85ba0dd2b208dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 15
+  Rules:
+  - Spawn: 0
+    Room: 48
+    MaxAmount: 0
+    MinAmount: 0
+    Chance: 0
+    ColidingAssetTypes: 
+  Doors: []
+  Items: []
 --- !u!1 &7542994543142491623
 GameObject:
   m_ObjectHideFlags: 0

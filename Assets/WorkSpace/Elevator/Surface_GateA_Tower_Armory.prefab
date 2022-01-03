@@ -233,13 +233,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6825590735943193086}
+  - component: {fileID: 1291749574338735423}
   m_Layer: 0
   m_Name: Surface_GateA_Tower_Armory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6825590735943193086
 Transform:
   m_ObjectHideFlags: 0
@@ -263,6 +264,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1291749574338735423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737476236628195591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0d8c25e9332c44f85ba0dd2b208dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 10
+  Rules:
+  - Spawn: 0
+    Room: 48
+    MaxAmount: 0
+    MinAmount: 0
+    Chance: 0
+    ColidingAssetTypes: 0b000000
+  Doors: []
+  Items: []
 --- !u!1 &1161005386995454154
 GameObject:
   m_ObjectHideFlags: 0

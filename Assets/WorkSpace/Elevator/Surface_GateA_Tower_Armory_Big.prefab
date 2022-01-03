@@ -2259,6 +2259,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5659410466801301522, guid: dc40268448ad774428886a269b06c76d,
         type: 3}
+      propertyPath: Breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659410466801301522, guid: dc40268448ad774428886a269b06c76d,
+        type: 3}
       propertyPath: Permissions
       value: 512
       objectReference: {fileID: 0}

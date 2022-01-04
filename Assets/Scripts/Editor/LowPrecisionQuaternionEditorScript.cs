@@ -13,12 +13,12 @@ public class LowPrecisionQuaternionEditorScript : UnityEditor.Editor
         Transform transform = ((MeshRenderer)target).GetComponent<Transform>();
         if (GUILayout.Button("Round to low precision quaternion"))
         {
-            Quaternion rotation = transform.localRotation;
+            Quaternion rotation = transform.rotation;
             sbyte _x = (sbyte)(rotation.x * 127f);
             sbyte _y = (sbyte)(rotation.y * 127f);
             sbyte _z = (sbyte)(rotation.z * 127f);
             sbyte _w = (sbyte)(rotation.w * 127f);
-            transform.localRotation = new Quaternion(_x / 127f, _y / 127f, _z / 127f, _w / 127f).normalized;
+            transform.rotation = new Quaternion(_x / 127f, _y / 127f, _z / 127f, _w / 127f).normalized;
         }
     }
 }

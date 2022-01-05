@@ -76,6 +76,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LCZ_DOOR
       objectReference: {fileID: 0}
+    - target: {fileID: 5659410466801301522, guid: dc40268448ad774428886a269b06c76d,
+        type: 3}
+      propertyPath: Breakable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8200042484887658501, guid: dc40268448ad774428886a269b06c76d,
         type: 3}
       propertyPath: m_RootOrder

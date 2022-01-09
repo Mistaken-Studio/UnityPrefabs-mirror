@@ -7,6 +7,8 @@ namespace Mistaken.UnityPrefabs
         public AssetType Type = AssetType.UNKNOWN;
 
         public SpawnRule[] Rules => this.gameObject.GetComponents<SpawnRule>();
+
+        public GameObject[] MovableObjects = new GameObject[0];
     
         public enum AssetType
         {
@@ -32,6 +34,8 @@ namespace Mistaken.UnityPrefabs
             EZ_VENT_MEDICALROOM,
 
             WARHEAD_TIMER,
+
+            LIGHT_TEST,
         }
     }
 }

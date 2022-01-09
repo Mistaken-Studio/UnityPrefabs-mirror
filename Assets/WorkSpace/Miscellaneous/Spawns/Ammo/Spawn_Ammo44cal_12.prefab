@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4629813876821378833}
+  - component: {fileID: 9194320136777356745}
   m_Layer: 0
   m_Name: Spawn_Ammo44cal_12
   m_TagString: Untagged
@@ -31,6 +32,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9194320136777356745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7076185528998125356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8780337a86b8eb42bca6246a077baa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 27
+  Ammo: 12
+  DestroyAfterUse: 0
+  Locked: 0
+  HasRb: 0
 --- !u!1001 &7016299337690739364
 PrefabInstance:
   m_ObjectHideFlags: 0

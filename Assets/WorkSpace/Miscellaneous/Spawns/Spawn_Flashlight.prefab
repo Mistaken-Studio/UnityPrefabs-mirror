@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9154866601971687678}
+  - component: {fileID: -4220457736877152539}
   m_Layer: 0
   m_Name: Spawn_Flashlight
   m_TagString: Untagged
@@ -31,6 +32,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4220457736877152539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2667168557992625558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8780337a86b8eb42bca6246a077baa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 15
+  Ammo: 0
+  DestroyAfterUse: 0
+  Locked: 0
+  HasRb: 0
 --- !u!1001 &3429298857789343543
 PrefabInstance:
   m_ObjectHideFlags: 0

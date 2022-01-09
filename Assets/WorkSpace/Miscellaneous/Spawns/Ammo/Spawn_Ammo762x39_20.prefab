@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6642038665517591169}
+  - component: {fileID: 374624872972038299}
   m_Layer: 0
   m_Name: Spawn_Ammo762x39_20
   m_TagString: Untagged
@@ -31,6 +32,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &374624872972038299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2566647077642691892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8780337a86b8eb42bca6246a077baa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 28
+  Ammo: 20
+  DestroyAfterUse: 0
+  Locked: 0
+  HasRb: 0
 --- !u!1001 &113702914819120818
 PrefabInstance:
   m_ObjectHideFlags: 0

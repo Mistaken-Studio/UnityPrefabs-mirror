@@ -5,11 +5,12 @@ namespace Mistaken.UnityPrefabs
 {
     public class Door : MonoBehaviour
     {
-        public int AnimatorLink;
         public bool DefaultState;
         public bool Locked;
         public bool Breakable;
         public KeycardPermissions Permissions;
+        public bool LockAfterUse;
+        public bool DestroyAfterUse;
 
         [Flags]
         public enum KeycardPermissions : ushort

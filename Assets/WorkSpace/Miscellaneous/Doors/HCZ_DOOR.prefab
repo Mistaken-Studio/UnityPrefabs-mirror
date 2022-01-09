@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1464868635191870655}
+  - component: {fileID: 1136570687386454107}
   m_Layer: 0
   m_Name: HCZ_DOOR
   m_TagString: Untagged
@@ -31,6 +32,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1136570687386454107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4862688196408780579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1d24e72a05acc4bace81657ec93644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimatorLink: 0
+  DefaultState: 0
+  Locked: 0
+  Breakable: 0
+  Permissions: 0
 --- !u!1001 &2250272153456963951
 PrefabInstance:
   m_ObjectHideFlags: 0

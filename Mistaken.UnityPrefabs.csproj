@@ -53,12 +53,14 @@
     <UnityVersion>2019.4.33f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\AnimatorTrigger.cs" />
     <Compile Include="Assets\AssetMeta.cs" />
     <Compile Include="Assets\DisableAnimatorScript.cs" />
     <Compile Include="Assets\DisplayScript.cs" />
     <Compile Include="Assets\Door.cs" />
     <Compile Include="Assets\HelicopterDoorScript.cs" />
     <Compile Include="Assets\HelicopterScript.cs" />
+    <Compile Include="Assets\Item.cs" />
     <Compile Include="Assets\SpawnRule.cs" />
     <Compile Include="Assets\WorkSpace\Miscellaneous\SegmentDisplay\MutliSegmentDisplayScript.cs" />
     <Compile Include="Assets\WorkSpace\Miscellaneous\SegmentDisplay\SegmentDisplayScript.cs" />

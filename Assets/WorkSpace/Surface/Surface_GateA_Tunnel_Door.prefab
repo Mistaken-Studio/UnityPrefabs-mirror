@@ -1,0 +1,222 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6288966160907578797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 188608463753488105}
+  - component: {fileID: 7144140736423885738}
+  - component: {fileID: 8182570551359253414}
+  m_Layer: 0
+  m_Name: Surface_GateA_Tunnel_Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &188608463753488105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288966160907578797}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7565656110125193365}
+  - {fileID: 6745638620272087149}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7144140736423885738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288966160907578797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0d8c25e9332c44f85ba0dd2b208dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 16
+  MovableObjects: []
+--- !u!114 &8182570551359253414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288966160907578797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df9c4068aa00e74288420e62c0c37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawn: 1
+  Room: 48
+  MaxAmount: 1
+  MinAmount: 0
+  Chance: 15
+  ColidingAssetTypes: 0600000004000000
+--- !u!1001 &2256876055296020175
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 188608463753488105}
+    m_Modifications:
+    - target: {fileID: 8501646573114026130, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1,
+        type: 3}
+      propertyPath: m_Name
+      value: Surface_GateA_Tunnel_CI_Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623431167884367450, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623431167884367450, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623431167884367450, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.8199654
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623431167884367450, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -43.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623431167884367450, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623431167884367450, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623431167884367450, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623431167884367450, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623431167884367450, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623431167884367450, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623431167884367450, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -4647732568820543494, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1, type: 3}
+    - {fileID: 8971612202086143591, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1, type: 3}
+--- !u!4 &7565656110125193365 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8623431167884367450, guid: 5fedf994936d9b64fbe6fe5dcf59a9d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2256876055296020175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7279950471033565919
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 188608463753488105}
+    m_Modifications:
+    - target: {fileID: 3483218363125796585, guid: 6a9687f3ee197c347aefe7123e2283c3,
+        type: 3}
+      propertyPath: m_Name
+      value: Surface_GateA_Tunnel_Elevator_Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078791164350554802, guid: 6a9687f3ee197c347aefe7123e2283c3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078791164350554802, guid: 6a9687f3ee197c347aefe7123e2283c3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078791164350554802, guid: 6a9687f3ee197c347aefe7123e2283c3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.8199654
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078791164350554802, guid: 6a9687f3ee197c347aefe7123e2283c3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078791164350554802, guid: 6a9687f3ee197c347aefe7123e2283c3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078791164350554802, guid: 6a9687f3ee197c347aefe7123e2283c3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078791164350554802, guid: 6a9687f3ee197c347aefe7123e2283c3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078791164350554802, guid: 6a9687f3ee197c347aefe7123e2283c3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078791164350554802, guid: 6a9687f3ee197c347aefe7123e2283c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078791164350554802, guid: 6a9687f3ee197c347aefe7123e2283c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078791164350554802, guid: 6a9687f3ee197c347aefe7123e2283c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3498782755920782281, guid: 6a9687f3ee197c347aefe7123e2283c3, type: 3}
+    - {fileID: 8862129866282766087, guid: 6a9687f3ee197c347aefe7123e2283c3, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 6a9687f3ee197c347aefe7123e2283c3, type: 3}
+--- !u!4 &6745638620272087149 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4078791164350554802, guid: 6a9687f3ee197c347aefe7123e2283c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7279950471033565919}
+  m_PrefabAsset: {fileID: 0}

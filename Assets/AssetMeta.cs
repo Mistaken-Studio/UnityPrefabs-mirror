@@ -13,7 +13,7 @@ namespace Mistaken.UnityPrefabs
         public enum AssetType
         {
             UNKNOWN = -1,
-            SURFACE_GATEB_BRIDGE_FORWARD,
+            SURFACE_GATEB_BRIDGE_FORWARD = 0,
             SURFACE_GATEB_BRIDGE_LEFT,
             SURFACE_GATEB_BRIDGE_LEFT_BUNKER,
             SURFACE_GATEB_BRIDGE_CONNECTOR,
@@ -29,11 +29,16 @@ namespace Mistaken.UnityPrefabs
             SURFACE_GATEA_MIDDLE_TOWER,
             SURFACE_HELIPAD,
             SURFACE_HELICOPTER,
+            SURFACE_GATEA_TUNNEL_DOOR,
+            SURFACE_ESCAPE_WORKSTATION,
 
-            EZ_CURVE_ROOM,
+            EZ_CURVE_ROOM = 1000,
             EZ_VENT_MEDICALROOM,
 
-            WARHEAD_TIMER,
+            LCZ_AIRLOCK_MEDICAL_ROOM = 2000,
+            LCZ_ARMORY_ADDICTIONAL_MEDKITS,
+
+            WARHEAD_TIMER = 9000,
 
             LIGHT_TEST,
         }

@@ -31,12 +31,16 @@ namespace Mistaken.UnityPrefabs
             SURFACE_HELICOPTER,
             SURFACE_GATEA_TUNNEL_DOOR,
             SURFACE_ESCAPE_WORKSTATION,
+            SURFACE_SHOOTING_TARGETS,
 
             EZ_CURVE_ROOM = 1000,
             EZ_VENT_MEDICALROOM,
 
             LCZ_AIRLOCK_MEDICAL_ROOM = 2000,
             LCZ_ARMORY_ADDICTIONAL_MEDKITS,
+            LCZ_ARMORY_SHOOTING_TARGET,
+         
+            HCZ_ARMORY_SHOOTING_TARGET = 3000,
 
             WARHEAD_TIMER = 9000,
 

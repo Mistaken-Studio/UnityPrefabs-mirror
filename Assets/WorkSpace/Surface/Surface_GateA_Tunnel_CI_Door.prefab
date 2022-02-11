@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 5
+  MovableObjects: []
 --- !u!114 &-4647732568820543494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df9c4068aa00e74288420e62c0c37b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawn: 1
+  Spawn: 0
   Room: 48
   MaxAmount: 1
   MinAmount: 0

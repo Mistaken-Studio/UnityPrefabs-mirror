@@ -32,6 +32,7 @@ namespace Mistaken.UnityPrefabs
             SURFACE_GATEA_TUNNEL_DOOR,
             SURFACE_ESCAPE_WORKSTATION,
             SURFACE_SHOOTING_TARGETS,
+            SURFACE_ADDITIONAL_LIGHTS,
 
             EZ_CURVE_ROOM = 1000,
             EZ_VENT_MEDICALROOM,

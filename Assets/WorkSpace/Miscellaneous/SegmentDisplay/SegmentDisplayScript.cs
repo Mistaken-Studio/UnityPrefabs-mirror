@@ -17,6 +17,9 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
         public MeshRenderer LeftBottomSegment;
         public MeshRenderer RightBottomSegment;
         public MeshRenderer BottomSegment;
+
+        private readonly Dictionary<MeshRenderer, Light> Lights = new Dictionary<MeshRenderer, Light>();
+
         static Dictionary<DisplaySegmentChars, bool[]> Chars = new Dictionary<DisplaySegmentChars, bool[]>()
         {
             {
@@ -340,6 +343,7 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
                 }
             }
         };
+        
         [Obsolete]
         public void SetNumber(byte? num)
         {
@@ -520,6 +524,18 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
         public void SetColor(MeshRenderer obj, Color color)
         {
             obj.material.color = color;
+            Lights[obj].enabled = color == EnabledColor;
+        }
+
+        private void Awake()
+        {
+            Lights[TopSegment] = TopSegment.GetComponentInChildren<Light>();
+            Lights[LeftTopSegment] = LeftTopSegment.GetComponentInChildren<Light>();
+            Lights[RightTopSegment] = RightTopSegment.GetComponentInChildren<Light>();
+            Lights[MiddleSegment] = MiddleSegment.GetComponentInChildren<Light>();
+            Lights[LeftBottomSegment] = LeftBottomSegment.GetComponentInChildren<Light>();
+            Lights[RightBottomSegment] = RightBottomSegment.GetComponentInChildren<Light>();
+            Lights[BottomSegment] = BottomSegment.GetComponentInChildren<Light>();
         }
     }
     public enum DisplaySegmentChars

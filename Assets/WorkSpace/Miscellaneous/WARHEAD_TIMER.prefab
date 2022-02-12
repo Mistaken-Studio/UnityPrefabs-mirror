@@ -12,16 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0d8c25e9332c44f85ba0dd2b208dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 18
-  Rules:
-  - Spawn: 1
-    Room: 48
-    MaxAmount: 1
-    MinAmount: 1
-    Chance: 100
-    ColidingAssetTypes: 
-  Doors: []
-  Items: []
+  Type: 9000
+  MovableObjects: []
+--- !u!114 &6492624127564757651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2158707321149598946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df9c4068aa00e74288420e62c0c37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawn: 1
+  Room: 48
+  MaxAmount: 1
+  MinAmount: 1
+  Chance: 0
+  ColidingAssetTypes: 
 --- !u!1001 &6492624127564287546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41,18 +51,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5183409943989035737, guid: 554e5852947b753448e6c9f60e270e90,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5183409943989035737, guid: 554e5852947b753448e6c9f60e270e90,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5183409943989035737, guid: 554e5852947b753448e6c9f60e270e90,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5183409943989035737, guid: 554e5852947b753448e6c9f60e270e90,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.5
+      value: 41.91
       objectReference: {fileID: 0}
     - target: {fileID: 5183409943989035737, guid: 554e5852947b753448e6c9f60e270e90,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.4
+      value: -10.418
       objectReference: {fileID: 0}
     - target: {fileID: 5183409943989035737, guid: 554e5852947b753448e6c9f60e270e90,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -47.481
+      value: -39.843
       objectReference: {fileID: 0}
     - target: {fileID: 5183409943989035737, guid: 554e5852947b753448e6c9f60e270e90,
         type: 3}

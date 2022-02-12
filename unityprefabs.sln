@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mistaken.UnityPrefabs", "Mistaken.UnityPrefabs.csproj", "{13ED0085-1379-03BA-89DE-EAEA1E87E918}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorAssembly", "EditorAssembly.csproj", "{162606F5-F2EB-EB78-1446-186E9A63DD4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13ED0085-1379-03BA-89DE-EAEA1E87E918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13ED0085-1379-03BA-89DE-EAEA1E87E918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13ED0085-1379-03BA-89DE-EAEA1E87E918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13ED0085-1379-03BA-89DE-EAEA1E87E918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162606F5-F2EB-EB78-1446-186E9A63DD4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162606F5-F2EB-EB78-1446-186E9A63DD4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162606F5-F2EB-EB78-1446-186E9A63DD4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162606F5-F2EB-EB78-1446-186E9A63DD4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

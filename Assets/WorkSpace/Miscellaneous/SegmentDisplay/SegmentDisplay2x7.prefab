@@ -50,8 +50,8 @@ MonoBehaviour:
   - {fileID: 7886951477923840908}
   - {fileID: 7886951478617589844}
   Background: {fileID: 5183409944726345623}
-  DebugNumber: 0
-  CurrentNumber: 0
+  DebugText: 
+  CurrentText: 
 --- !u!1 &5183409944726345620
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +176,7 @@ PrefabInstance:
     - target: {fileID: 9029535456690465911, guid: 1b1c3bf77e345e142a081a44dd430883,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 9029535456690465911, guid: 1b1c3bf77e345e142a081a44dd430883,
         type: 3}
@@ -263,7 +263,7 @@ PrefabInstance:
     - target: {fileID: 9029535456690465911, guid: 1b1c3bf77e345e142a081a44dd430883,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 9029535456690465911, guid: 1b1c3bf77e345e142a081a44dd430883,
         type: 3}

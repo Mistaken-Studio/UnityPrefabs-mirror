@@ -54,8 +54,8 @@ MonoBehaviour:
   - {fileID: 4938119207872748603}
   - {fileID: 4938119208502007622}
   Background: {fileID: 7934364207335834616}
-  DebugNumber: 0
-  CurrentNumber: 0
+  DebugText: 
+  CurrentText: 
 --- !u!1 &7934364207335834619
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +180,7 @@ PrefabInstance:
     - target: {fileID: 9029535456690465911, guid: 1b1c3bf77e345e142a081a44dd430883,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 9029535456690465911, guid: 1b1c3bf77e345e142a081a44dd430883,
         type: 3}
@@ -267,7 +267,7 @@ PrefabInstance:
     - target: {fileID: 9029535456690465911, guid: 1b1c3bf77e345e142a081a44dd430883,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 9029535456690465911, guid: 1b1c3bf77e345e142a081a44dd430883,
         type: 3}
@@ -354,7 +354,7 @@ PrefabInstance:
     - target: {fileID: 9029535456690465911, guid: 1b1c3bf77e345e142a081a44dd430883,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 9029535456690465911, guid: 1b1c3bf77e345e142a081a44dd430883,
         type: 3}
@@ -441,7 +441,7 @@ PrefabInstance:
     - target: {fileID: 9029535456690465911, guid: 1b1c3bf77e345e142a081a44dd430883,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 9029535456690465911, guid: 1b1c3bf77e345e142a081a44dd430883,
         type: 3}

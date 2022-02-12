@@ -50,15 +50,6 @@ public class PathLightController : MonoBehaviour
 
         foreach (var light in PlusZ_MinusZ_Lights)
             SetStatus(light, false);
-
-
-        this.StartCoroutine(DoAnimation());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void SetStatus(GameObject light, bool value)
@@ -67,21 +58,34 @@ public class PathLightController : MonoBehaviour
         light.GetComponentInChildren<Light>().enabled = value;
     }
 
-    private IEnumerator DoAnimation()
+    public void SetTargetSide(Side targetSide)
+    {
+        Side rawSide = Side.PLUS_X;
+        if (this.transform.rotation.y == 90)
+            rawSide += 1;
+        else if (this.transform.rotation.y == 180)
+            rawSide += 2;
+        else if (this.transform.rotation.y == 270)
+            rawSide += 3;
+
+        targetSide += (int)rawSide;
+        if ((int)targetSide > 3)
+            targetSide -= 3;
+
+        TargetSide = targetSide;
+    }
+
+    public IEnumerator DoAnimation()
     {
         GameObject[][] plusX = PlusX.ToArray();
         GameObject[][] minusX = MinusX.ToArray();
         GameObject[][] plusZ = PlusZ.ToArray();
         GameObject[][] minusZ = MinusZ.ToArray();
 
-        TargetSide = Side.PLUS_Z;
-
         while (true)
         {
             yield return new WaitForSeconds(.2f);
-            Debug.Log(name);
-            Debug.Log(TargetSide);
-            Debug.Log(State);
+            Debug.Log($"{this.name}: {TargetSide}");
             GameObject[][] list;
             switch (TargetSide)
             {
@@ -124,9 +128,9 @@ public class PathLightController : MonoBehaviour
     public enum Side
     {
         PLUS_X,
-        PLUS_Z,
-        MINUS_X,
         MINUS_Z,
+        MINUS_X,
+        PLUS_Z,
     }
 
     public Side TargetSide;

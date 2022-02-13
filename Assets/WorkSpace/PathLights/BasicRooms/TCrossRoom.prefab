@@ -71,12 +71,12 @@ MonoBehaviour:
   - {fileID: 3389971437059033474}
   - {fileID: 3389971437639687459}
   MinusX_MinusZ_Lights:
-  - {fileID: 5271392741650431772}
-  - {fileID: 3188456567754398386}
-  - {fileID: 5271392741687088969}
   - {fileID: 5271392740019586024}
+  - {fileID: 5271392741687088969}
+  - {fileID: 3188456567754398386}
+  - {fileID: 5271392741650431772}
   PlusZ_MinusZ_Lights:
-  - {fileID: 2723806610710312694}
+  - {fileID: 1280534248154082420}
   - {fileID: 9189895279188207258}
   - {fileID: 7753990609418065488}
   - {fileID: 3421841212159164954}
@@ -634,12 +634,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7448004215011955261}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2723806610710312694 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4796412703786263755, guid: 996534ba9fa568148bca7b29fc7c46e4,
-    type: 3}
-  m_PrefabInstance: {fileID: 7448004215011955261}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9189895279188207258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1789531382602216615, guid: 996534ba9fa568148bca7b29fc7c46e4,
@@ -655,6 +649,12 @@ GameObject:
 --- !u!1 &3421841212159164954 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5197279506408951847, guid: 996534ba9fa568148bca7b29fc7c46e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7448004215011955261}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1280534248154082420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8546142428566158921, guid: 996534ba9fa568148bca7b29fc7c46e4,
     type: 3}
   m_PrefabInstance: {fileID: 7448004215011955261}
   m_PrefabAsset: {fileID: 0}

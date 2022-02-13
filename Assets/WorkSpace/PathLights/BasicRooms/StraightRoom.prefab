@@ -59,10 +59,10 @@ MonoBehaviour:
   PlusX_MinusZ_Lights: []
   PlusX_PlusZ_Lights: []
   PlusX_MinusX_Lights:
-  - {fileID: 1353648693611792602}
-  - {fileID: 6209979289546857616}
+  - {fileID: 3202249817969338036}
   - {fileID: 4772939515484466266}
-  - {fileID: 1763464425128508470}
+  - {fileID: 6209979289546857616}
+  - {fileID: 1353648693611792602}
   MinusX_PlusZ_Lights: []
   MinusX_MinusZ_Lights: []
   PlusZ_MinusZ_Lights: []
@@ -236,9 +236,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6550857826129631485}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1763464425128508470 stripped
+--- !u!1 &3202249817969338036 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4796412703786263755, guid: 996534ba9fa568148bca7b29fc7c46e4,
+  m_CorrespondingSourceObject: {fileID: 8546142428566158921, guid: 996534ba9fa568148bca7b29fc7c46e4,
     type: 3}
   m_PrefabInstance: {fileID: 6550857826129631485}
   m_PrefabAsset: {fileID: 0}

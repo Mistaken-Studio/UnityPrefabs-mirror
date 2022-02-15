@@ -23,6 +23,10 @@ namespace Mistaken.UnityPrefabs.PathLights
         void Start()
         {
             DisableAll(true);
+
+#if UNITY_EDITOR
+            this.StartCoroutine(this.DoAnimation());
+#endif
         }
 
         private void DisableAll(bool force)

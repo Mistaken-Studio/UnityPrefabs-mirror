@@ -9,7 +9,8 @@ namespace Mistaken.UnityPrefabs
         public SpawnRule[] Rules => this.gameObject.GetComponents<SpawnRule>();
 
         public GameObject[] MovableObjects = new GameObject[0];
-    
+        public GameObject[] ColorChangableObjects = new GameObject[0];
+
         public enum AssetType
         {
             UNKNOWN = -1,
@@ -36,6 +37,7 @@ namespace Mistaken.UnityPrefabs
 
             EZ_CURVE_ROOM = 1000,
             EZ_VENT_MEDICALROOM,
+            EZ_ELECTRICALROOM,
 
             LCZ_AIRLOCK_MEDICAL_ROOM = 2000,
             LCZ_ARMORY_ADDICTIONAL_MEDKITS,

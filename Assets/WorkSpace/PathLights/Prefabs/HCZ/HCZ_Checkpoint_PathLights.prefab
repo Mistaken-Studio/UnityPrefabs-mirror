@@ -59,13 +59,13 @@ MonoBehaviour:
   PlusX_MinusZ_Lights: []
   PlusX_PlusZ_Lights: []
   PlusX_MinusX_Lights:
-  - {fileID: 5266074944155541845}
   - {fileID: 1005354199328224543}
+  - {fileID: 5266074944155541845}
   MinusX_PlusZ_Lights: []
   MinusX_MinusZ_Lights: []
   PlusZ_MinusZ_Lights: []
   TargetSide: 0
-  SpecialState: -1
+  SpecialState: 2
   State: 0
 --- !u!1 &2503219019958271599
 GameObject:
@@ -212,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: -1
   MovableObjects: []
+  ColorChangableObjects: []
 --- !u!114 &5821697073051910085
 MonoBehaviour:
   m_ObjectHideFlags: 0

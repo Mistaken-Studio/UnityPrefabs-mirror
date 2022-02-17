@@ -177,62 +177,60 @@ namespace Mistaken.UnityPrefabs.PathLights
         {
             yield return new WaitForSeconds(1f);
 
+            while (true)
+                yield return new WaitForSeconds(DoAnimationSingleCycle());
+        }
+
+        public float DoAnimationSingleCycle()
+        {
             GameObject[][] plusX = PlusX.ToArray();
             GameObject[][] minusX = MinusX.ToArray();
             GameObject[][] plusZ = PlusZ.ToArray();
             GameObject[][] minusZ = MinusZ.ToArray();
 
-            while (true)
+            GameObject[][] list;
+            switch (TargetSide)
             {
-                GameObject[][] list;
-                switch (TargetSide)
-                {
-                    case Side.NONE:
-                        yield return new WaitForSeconds(2f);
-                        continue;
+                case Side.PLUS_X:
+                    if (plusX.Length == 0)
+                        return 0;
+                    list = plusX;
+                    break;
 
-                    case Side.PLUS_X:
-                        if (plusX.Length == 0)
-                            continue;
-                        list = plusX;
-                        break;
+                case Side.MINUS_X:
+                    if (minusX.Length == 0)
+                        return 0;
+                    list = minusX;
+                    break;
 
-                    case Side.MINUS_X:
-                        if (minusX.Length == 0)
-                            continue;
-                        list = minusX;
-                        break;
+                case Side.PLUS_Z:
+                    if (plusZ.Length == 0)
+                        return 0;
+                    list = plusZ;
+                    break;
 
-                    case Side.PLUS_Z:
-                        if (plusZ.Length == 0)
-                            continue;
-                        list = plusZ;
-                        break;
+                case Side.MINUS_Z:
+                    if (minusZ.Length == 0)
+                        return 0;
+                    list = minusZ;
+                    break;
 
-                    case Side.MINUS_Z:
-                        if (minusZ.Length == 0)
-                            continue;
-                        list = minusZ;
-                        break;
-
-                    default:
-                        yield return new WaitForSeconds(2f);
-                        continue;
-                }
-
-
-                foreach (var item in list[State - 2 < 0 ? State - 2 + list.Length : State - 2])
-                    SetStatus(item, false);
-
-                foreach (var item in list[State])
-                    SetStatus(item, true);
-
-                State++;
-                if (State >= list.Length)
-                    State = 0;
-
-                yield return new WaitForSeconds(2f / list.Length);
+                default:
+                    return 2;
             }
+
+
+            foreach (var item in list[State - 2 < 0 ? State - 2 + list.Length : State - 2])
+                SetStatus(item, false);
+
+            foreach (var item in list[State])
+                SetStatus(item, true);
+
+            State++;
+            if (State >= list.Length)
+                State = 0;
+
+            return 2f / list.Length;
         }
 
         public enum Side

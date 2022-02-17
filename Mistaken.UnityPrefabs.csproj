@@ -61,12 +61,12 @@
     <Compile Include="Assets\HelicopterDoorScript.cs" />
     <Compile Include="Assets\HelicopterScript.cs" />
     <Compile Include="Assets\Item.cs" />
-    <Compile Include="Assets\PathLightController.cs" />
     <Compile Include="Assets\ScriptTrigger.cs" />
     <Compile Include="Assets\SpawnRule.cs" />
     <Compile Include="Assets\WorkSpace\Miscellaneous\SegmentDisplay\MultiSegmentDisplayScript.cs" />
     <Compile Include="Assets\WorkSpace\Miscellaneous\SegmentDisplay\SegmentDisplayScript.cs" />
     <Compile Include="Assets\WorkSpace\Miscellaneous\SegmentDisplay\TimerSegmentScript.cs" />
+    <Compile Include="Assets\WorkSpace\PathLights\PathLightController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mistaken.UnityPrefabs.asmdef" />

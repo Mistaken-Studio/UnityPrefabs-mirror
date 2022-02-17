@@ -1174,8 +1174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0252913de65e0e344b3772163cf05ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnabledColor: {r: 0.018987417, g: 1, b: 0, a: 0}
-  DisabledColor: {r: 0.2264151, g: 0.21253115, b: 0.21253115, a: 0}
+  EnabledColor: {r: 0.018987417, g: 1, b: 0, a: 1}
+  DisabledColor: {r: 0.2264151, g: 0.21253115, b: 0.21253115, a: 1}
   TopSegment: {fileID: 6387147696439100990}
   LeftTopSegment: {fileID: 7712582554570711008}
   RightTopSegment: {fileID: 6039282486874405109}

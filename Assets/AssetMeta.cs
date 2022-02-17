@@ -46,6 +46,7 @@ namespace Mistaken.UnityPrefabs
             HCZ_ARMORY_SHOOTING_TARGET = 3000,
 
             WARHEAD_TIMER = 9000,
+            RESPAWN_TIMER,
 
             LIGHT_TEST,
         }

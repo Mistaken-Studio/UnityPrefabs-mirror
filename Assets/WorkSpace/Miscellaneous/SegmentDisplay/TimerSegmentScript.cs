@@ -27,10 +27,15 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
         private IEnumerator CentralLoop()
         {
             bool enable = true;
-            foreach (var item in CenterLights)
+            while (true)
             {
-                Lights[item].enabled = enable;
-                item.material.color = enable ? this.segments[0].EnabledColor : this.segments[0].DisabledColor;
+                foreach (var item in CenterLights)
+                {
+                    Lights[item].enabled = enable;
+                    item.material.color = enable ? this.segments[0].EnabledColor : this.segments[0].DisabledColor;
+                }
+
+                enable = !enable;
                 yield return new WaitForSeconds(0.5f);
             }
         }
@@ -41,7 +46,7 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
             {
                 yield return new WaitForSeconds(1);
                 Counter -= 1;
-                setDisplayTime(Counter);
+                SetDisplayTime(Counter);
             }
 
             this.SetText("0000");
@@ -55,11 +60,11 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
         public void SetTime(int seconds)
         {
             Counter = seconds;
-            this.StopAllCoroutines();
+            this.StopCoroutine(nameof(Loop));
             this.StartCoroutine(Loop());
         }
 
-        private void setDisplayTime(int seconds)
+        public void SetDisplayTime(int seconds)
         {
             int second = seconds % 60;
             int minute = (seconds - second) / 60;

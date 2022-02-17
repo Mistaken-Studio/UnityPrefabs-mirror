@@ -29,6 +29,12 @@ namespace Mistaken.UnityPrefabs.PathLights
 #endif*/
         }
 
+        private bool destroyed = false;
+        void OnDestroy()
+        {
+            destroyed = true;
+        }
+
         private void DisableAll(bool force)
         {
             State = 0;
@@ -67,6 +73,15 @@ namespace Mistaken.UnityPrefabs.PathLights
 
         private void SetStatus(GameObject light, bool value, bool force = false)
         {
+            if (destroyed)
+                return;
+
+            if (this.gameObject == null)
+            {
+                Debug.LogWarning("Can's set Status for light for null master game object aka PathLightController's gameObject");
+                return;
+            }
+
             this.StartCoroutine(_setStatus(light, value, force));
         }
 
@@ -81,6 +96,9 @@ namespace Mistaken.UnityPrefabs.PathLights
                 Lights[light] = lightC;
             }
 
+            if ((lightC?.Length ?? 0) == 0)
+                yield break;
+
             foreach (var item in lightC)
             {
                 if (value)
@@ -88,7 +106,6 @@ namespace Mistaken.UnityPrefabs.PathLights
                 else if (force)
                     item.enabled = false;
             }
-
             if (!value && !value)
             {
                 for (float i = 0; i < 1; i += 1f / FadoutTicks)

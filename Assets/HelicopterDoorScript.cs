@@ -13,16 +13,16 @@ public class HelicopterDoorScript : MonoBehaviour
 
     void LateUpdate()
     {
-        if(IsOpen != isOpen)
+        /*if(IsOpen != isOpen)
         {
             if (IsOpen)
                 OpenDoor();
             else
                 CloseDoor();
-        }
+        }*/
     }
 
-    public bool IsOpen;
+    // public bool IsOpen = false;
     private bool isOpen;
     public void OpenDoor()
     {

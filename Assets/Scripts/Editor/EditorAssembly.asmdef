@@ -1,6 +1,8 @@
 {
     "name": "EditorAssembly",
-    "references": [],
+    "references": [
+        "GUID:e868aba6fefb76a4aa4e061a742cdb96"
+    ],
     "includePlatforms": [
         "Editor"
     ],

@@ -58,6 +58,7 @@
     <Compile Include="Assets\DisableAnimatorScript.cs" />
     <Compile Include="Assets\DisplayScript.cs" />
     <Compile Include="Assets\Door.cs" />
+    <Compile Include="Assets\ElectricalBoxScript.cs" />
     <Compile Include="Assets\HelicopterDoorScript.cs" />
     <Compile Include="Assets\HelicopterScript.cs" />
     <Compile Include="Assets\Item.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Assets\WorkSpace\Miscellaneous\SegmentDisplay\MultiSegmentDisplayScript.cs" />
     <Compile Include="Assets\WorkSpace\Miscellaneous\SegmentDisplay\SegmentDisplayScript.cs" />
     <Compile Include="Assets\WorkSpace\Miscellaneous\SegmentDisplay\TimerSegmentScript.cs" />
+    <Compile Include="Assets\WorkSpace\Miscellaneous\Text\TextGenerator.cs" />
     <Compile Include="Assets\WorkSpace\PathLights\PathLightController.cs" />
   </ItemGroup>
   <ItemGroup>

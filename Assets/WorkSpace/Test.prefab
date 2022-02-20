@@ -48,6 +48,7 @@ MonoBehaviour:
   Type: -1
   MovableObjects:
   - {fileID: 8388017831008329249}
+  ColorChangableObjects: []
 --- !u!114 &7257166458770110020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df9c4068aa00e74288420e62c0c37b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawn: 1
+  Spawn: 0
   Room: 48
   MaxAmount: 1
   MinAmount: 1

@@ -1025,6 +1025,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 11
+  MovableObjects: []
+  ColorChangableObjects: []
 --- !u!114 &4380072769656412941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2016,6 +2018,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503946439072451579, guid: 1e75e5f5add5dde4e8b225aebb9016c4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4793287399721272245, guid: 1e75e5f5add5dde4e8b225aebb9016c4,
         type: 3}
@@ -3232,6 +3239,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6521286760296743647}
     m_Modifications:
+    - target: {fileID: 553394573297194307, guid: ceac153e0d34dc64ca6b174dc90b96d6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 553394573297194307, guid: ceac153e0d34dc64ca6b174dc90b96d6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2572509744551601908, guid: ceac153e0d34dc64ca6b174dc90b96d6,
         type: 3}
       propertyPath: m_Name

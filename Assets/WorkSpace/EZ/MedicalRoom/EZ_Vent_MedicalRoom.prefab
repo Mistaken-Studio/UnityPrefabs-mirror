@@ -903,7 +903,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0d8c25e9332c44f85ba0dd2b208dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 17
+  Type: 1001
+  MovableObjects: []
+  ColorChangableObjects: []
 --- !u!114 &-9182607363424045782
 MonoBehaviour:
   m_ObjectHideFlags: 0

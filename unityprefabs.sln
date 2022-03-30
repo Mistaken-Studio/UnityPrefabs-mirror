@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mistaken.UnityPrefabs", "Mistaken.UnityPrefabs.csproj", "{13ED0085-1379-03BA-89DE-EAEA1E87E918}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorAssembly", "EditorAssembly.csproj", "{162606F5-F2EB-EB78-1446-186E9A63DD4D}"

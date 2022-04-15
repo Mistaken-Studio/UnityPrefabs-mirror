@@ -1739,6 +1739,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9173167040190664763}
+  - component: {fileID: 299955563345914804}
+  - component: {fileID: 46595215319128541}
   m_Layer: 0
   m_Name: CASSIE_ROOM 1
   m_TagString: Untagged
@@ -1811,6 +1813,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &299955563345914804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5198453523916862249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0d8c25e9332c44f85ba0dd2b208dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: -1
+  MovableObjects: []
+  ColorChangableObjects: []
+--- !u!114 &46595215319128541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5198453523916862249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df9c4068aa00e74288420e62c0c37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawn: 1
+  Room: 48
+  MaxAmount: 1
+  MinAmount: 1
+  Chance: 0
+  ColidingAssetTypes: 
 --- !u!1 &5532700429819982908
 GameObject:
   m_ObjectHideFlags: 0

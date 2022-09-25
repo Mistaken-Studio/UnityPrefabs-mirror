@@ -49,6 +49,8 @@ namespace Mistaken.UnityPrefabs
             RESPAWN_TIMER,
 
             LIGHT_TEST,
+
+            TURRET_TEST = 10000,
         }
     }
 }

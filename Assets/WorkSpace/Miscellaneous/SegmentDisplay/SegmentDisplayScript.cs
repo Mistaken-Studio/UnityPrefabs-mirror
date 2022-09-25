@@ -344,118 +344,6 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
             }
         };
         
-        [Obsolete]
-        public void SetNumber(byte? num)
-        {
-            if(num == null)
-            {
-                SetColor(TopSegment, DisabledColor);
-                SetColor(LeftTopSegment, DisabledColor);
-                SetColor(RightTopSegment, DisabledColor);
-                SetColor(MiddleSegment, DisabledColor);
-                SetColor(LeftBottomSegment, DisabledColor);
-                SetColor(RightBottomSegment, DisabledColor);
-                SetColor(BottomSegment, DisabledColor);
-                return;
-            }
-
-            if (num > 9)
-                throw new ArgumentOutOfRangeException(nameof(num), "Segment display can only display numbers from 0 to 9");
-
-            switch (num)
-            {
-                case 0:
-                    SetColor(TopSegment, EnabledColor);
-                    SetColor(LeftTopSegment, EnabledColor);
-                    SetColor(RightTopSegment, EnabledColor);
-                    SetColor(MiddleSegment, DisabledColor);
-                    SetColor(LeftBottomSegment, EnabledColor);
-                    SetColor(RightBottomSegment, EnabledColor);
-                    SetColor(BottomSegment, EnabledColor);
-                    break;
-                case 1:
-                    SetColor(TopSegment, DisabledColor);
-                    SetColor(LeftTopSegment, DisabledColor);
-                    SetColor(RightTopSegment, EnabledColor);
-                    SetColor(MiddleSegment, DisabledColor);
-                    SetColor(LeftBottomSegment, DisabledColor);
-                    SetColor(RightBottomSegment, EnabledColor);
-                    SetColor(BottomSegment, DisabledColor);
-                    break;
-                case 2:
-                    SetColor(TopSegment, EnabledColor);
-                    SetColor(LeftTopSegment, DisabledColor);
-                    SetColor(RightTopSegment, EnabledColor);
-                    SetColor(MiddleSegment, EnabledColor);
-                    SetColor(LeftBottomSegment, EnabledColor);
-                    SetColor(RightBottomSegment, DisabledColor);
-                    SetColor(BottomSegment, EnabledColor);
-                    break;
-                case 3:
-                    SetColor(TopSegment, EnabledColor);
-                    SetColor(LeftTopSegment, DisabledColor);
-                    SetColor(RightTopSegment, EnabledColor);
-                    SetColor(MiddleSegment, EnabledColor);
-                    SetColor(LeftBottomSegment, DisabledColor);
-                    SetColor(RightBottomSegment, EnabledColor);
-                    SetColor(BottomSegment, EnabledColor);
-                    break;
-                case 4:
-                    SetColor(TopSegment, DisabledColor);
-                    SetColor(LeftTopSegment, EnabledColor);
-                    SetColor(RightTopSegment, EnabledColor);
-                    SetColor(MiddleSegment, EnabledColor);
-                    SetColor(LeftBottomSegment, DisabledColor);
-                    SetColor(RightBottomSegment, EnabledColor);
-                    SetColor(BottomSegment, DisabledColor);
-                    break;
-                case 5:
-                    SetColor(TopSegment, EnabledColor);
-                    SetColor(LeftTopSegment, EnabledColor);
-                    SetColor(RightTopSegment, DisabledColor);
-                    SetColor(MiddleSegment, EnabledColor);
-                    SetColor(LeftBottomSegment, DisabledColor);
-                    SetColor(RightBottomSegment, EnabledColor);
-                    SetColor(BottomSegment, EnabledColor);
-                    break;
-                case 6:
-                    SetColor(TopSegment, EnabledColor);
-                    SetColor(LeftTopSegment, EnabledColor);
-                    SetColor(RightTopSegment, DisabledColor);
-                    SetColor(MiddleSegment, EnabledColor);
-                    SetColor(LeftBottomSegment, EnabledColor);
-                    SetColor(RightBottomSegment, EnabledColor);
-                    SetColor(BottomSegment, EnabledColor);
-                    break;
-                case 7:
-                    SetColor(TopSegment, EnabledColor);
-                    SetColor(LeftTopSegment, DisabledColor);
-                    SetColor(RightTopSegment, EnabledColor);
-                    SetColor(MiddleSegment, DisabledColor);
-                    SetColor(LeftBottomSegment, DisabledColor);
-                    SetColor(RightBottomSegment, EnabledColor);
-                    SetColor(BottomSegment, DisabledColor);
-                    break;
-                case 8:
-                    SetColor(TopSegment, EnabledColor);
-                    SetColor(LeftTopSegment, EnabledColor);
-                    SetColor(RightTopSegment, EnabledColor);
-                    SetColor(MiddleSegment, EnabledColor);
-                    SetColor(LeftBottomSegment, EnabledColor);
-                    SetColor(RightBottomSegment, EnabledColor);
-                    SetColor(BottomSegment, EnabledColor);
-                    break;
-                case 9:
-                    SetColor(TopSegment, EnabledColor);
-                    SetColor(LeftTopSegment, EnabledColor);
-                    SetColor(RightTopSegment, EnabledColor);
-                    SetColor(MiddleSegment, EnabledColor);
-                    SetColor(LeftBottomSegment, DisabledColor);
-                    SetColor(RightBottomSegment, EnabledColor);
-                    SetColor(BottomSegment, EnabledColor);
-                    break;
-            }
-        }
         public void SetChar(DisplaySegmentChars character)
         {
             var colors = Chars[character];
@@ -468,6 +356,7 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
             SetColor(BottomSegment, colors[6] ? EnabledColor : DisabledColor);
             colors = null;
         }
+
         public bool TrySetChar(char character)
         {
             switch (character)
@@ -516,15 +405,17 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
             }
             return false;
         }
+
         public void SetChar(char character)
         {
             if(!TrySetChar(character))
                 throw new ArgumentOutOfRangeException(nameof(character),"Cannot display this char on 7-segment display");
         }
+
         public void SetColor(MeshRenderer obj, Color color)
         {
             obj.material.color = color;
-            Lights[obj].enabled = color == EnabledColor;
+            Lights[obj].intensity = color == EnabledColor ? 1 : 0;
         }
 
         private void Awake()
@@ -538,6 +429,7 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
             Lights[BottomSegment] = BottomSegment.GetComponentInChildren<Light>();
         }
     }
+
     public enum DisplaySegmentChars
     {
         A,

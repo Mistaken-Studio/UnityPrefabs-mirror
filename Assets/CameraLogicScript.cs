@@ -1,15 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using UnityEngine;
-using static UnityEditor.LightmapEditorSettings;
-using static UnityEngine.GraphicsBuffer;
 
 public class CameraLogicScript : MonoBehaviour
 {
     public GameObject toFollow;
     public GameObject FollowObject;
+    public Light statusLight;
+    public MeshRenderer statusLightBody;
+
+    private void SetLightColor(Color color)
+    {
+        statusLight.color = color;
+        statusLightBody.material.color = color;
+    }
 
     private Quaternion lastRot;
     private Vector3 debug;
@@ -79,39 +86,60 @@ public class CameraLogicScript : MonoBehaviour
         }
     }
 
+    private void ResetAnim()
+    {
+        rotAnim = 0;
+        rev = false;
+        toFollow = null;
+        FollowObject.transform.localRotation = startRot;
+    }
+
+
     private float rotAnim = 0;
     private bool rev = false;
     private bool isLockedOn = false;
+
+    private float uselessDebug = 0;
     private void FixedUpdate()
     {
         if (toFollow != null)
         {
-            var rotation = Quaternion.LookRotation(this.toFollow.transform.position - this.FollowObject.transform.position);
+            var rotation = Quaternion.LookRotation(this.toFollow.transform.position - this.FollowObject.transform.position + Vector3.up * .5f);
             var target = Quaternion.Slerp(this.FollowObject.transform.rotation, rotation, Time.deltaTime * 2.0f);
             debug = target.eulerAngles;
             float x = target.eulerAngles.x;
             //if (x > 180)
             //    x = x - 360;
-            if (x > 30 && x < 180)
+            if (x > 40 && x < 180)
             {
-                x = 30;
-                toFollow = null;
-                FollowObject.transform.localRotation = startRot;
+                ResetAnim();
                 return;
             }
-            else if (x < 330 && x > 180)
+            else if (x < 320 && x > 180)
             {
-                x = 330;
-                toFollow = null;
-                FollowObject.transform.localRotation = startRot;
+                ResetAnim();
                 return;
             }
 
-            target = Quaternion.Euler(new Vector3(x, Mathf.Clamp(target.eulerAngles.y, 0, 90), 0));
+            float y = target.eulerAngles.y;
+            //UnityEngine.Debug.Log(y - startRot.eulerAngles.y);
+            if (y - startRot.eulerAngles.y > 110)
+            {
+                ResetAnim();
+                return;
+            }
+            else if (y - startRot.eulerAngles.y < 0)
+            {
+                ResetAnim();
+                return;
+            }
+
+            target = Quaternion.Euler(new Vector3(x, y, 0));
 
             if (lastRot == target)
             {
                 isLockedOn = true;
+                SetLightColor(Color.red);
                 return;
             }
 
@@ -121,19 +149,51 @@ public class CameraLogicScript : MonoBehaviour
 
             //this.FollowObject.transform.LookAt(toFollow.transform.position);
 
+            SetLightColor(Color.yellow);
             this.FollowObject.transform.rotation = target;
         }
         else
         {
+            SetLightColor(Color.green);
             isLockedOn = false;
+            // * (360 / 252f) / 4f
+            var tmp = Vector3.up * MovementCurve.Evaluate(rotAnim) * 90;
 
-            this.FollowObject.transform.eulerAngles += Vector3.up * internalMovementCurve.Evaluate(rotAnim) * (rev ? -1 : 1) * (360 / 252f) / 4f;
-            rotAnim += Time.fixedDeltaTime / 5;
-            if (rotAnim > 1)
+            uselessDebug += tmp.y * Time.fixedDeltaTime * 100f;
+
+            this.FollowObject.transform.eulerAngles = tmp;
+            rotAnim += Time.fixedDeltaTime / 5 * (rev ? -1 : 1);
+            float dumb = this.FollowObject.transform.localEulerAngles.y;
+
+            /*if (Mathf.FloorToInt(dumb) > 45f)
             {
-                rev = !rev;
                 rotAnim = 0;
+                rev = true;
+                this.FollowObject.transform.localEulerAngles -= Vector3.up * (this.FollowObject.transform.localEulerAngles.y - 45);
+            }
+            else if (Mathf.FloorToInt(dumb) < -45)
+            {
+                rotAnim = 0;
+                rev = false;
+                this.FollowObject.transform.localEulerAngles -= Vector3.up * (this.FollowObject.transform.localEulerAngles.y + 45);
+            }*/
+
+            if(rotAnim > 1)
+            {
+                //rotAnim = 0;
+                rev = true;
+            }
+
+            else if (rotAnim <= 0)
+            {
+                //rotAnim = 0;
+                rev = false;
             }
         }
+    }
+
+    private IEnumerator<float> DoAnim()
+    {
+        yield break;
     }
 }

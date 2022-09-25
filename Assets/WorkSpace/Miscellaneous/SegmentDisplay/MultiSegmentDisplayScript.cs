@@ -24,12 +24,6 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
             if (CurrentText != DebugText)
                 SetText(DebugText);
         }
-        [Obsolete]
-        public void SetNumber(ushort num)
-        {
-            SetText(num.ToString());
-            return;
-        }
 
         public void SetText(string text)
         {

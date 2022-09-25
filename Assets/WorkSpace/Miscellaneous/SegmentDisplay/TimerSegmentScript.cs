@@ -31,7 +31,7 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
             {
                 foreach (var item in CenterLights)
                 {
-                    Lights[item].enabled = enable;
+                    Lights[item].intensity = enable ? 1 : 0;
                     item.material.color = enable ? this.segments[0].EnabledColor : this.segments[0].DisabledColor;
                 }
 

@@ -102,11 +102,15 @@ namespace Mistaken.UnityPrefabs.PathLights
             foreach (var item in lightC)
             {
                 if (value)
-                    item.enabled = true;
+                {
+                    item.intensity = 1;
+                }
                 else if (force)
-                    item.enabled = false;
+                {
+                    item.intensity = 0;
+                }
             }
-            if (!value && !value)
+            if (!value)
             {
                 for (float i = 0; i < 1; i += 1f / FadoutTicks)
                 {
@@ -118,8 +122,7 @@ namespace Mistaken.UnityPrefabs.PathLights
 
                 foreach (var item in lightC)
                 {
-                    item.enabled = false;
-                    item.intensity = 1;
+                    item.intensity = 0;
                 }
             }
         }

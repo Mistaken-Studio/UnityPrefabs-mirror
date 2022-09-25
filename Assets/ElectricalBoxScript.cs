@@ -33,22 +33,22 @@ namespace Mistaken.UnityPrefabs.Misc
             switch (id)
             {
                 case 1:
-                    lights[Light1].enabled = enable;
+                    lights[Light1].intensity = enable ? 1 : 0;
                     lights[Light1].color = color;
                     break;
 
                 case 2:
-                    lights[Light2].enabled = enable;
+                    lights[Light2].intensity = enable ? 1 : 0;
                     lights[Light2].color = color;
                     break;
 
                 case 3:
-                    lights[Light3].enabled = enable;
+                    lights[Light3].intensity = enable ? 1 : 0;
                     lights[Light3].color = color;
                     break;
 
                 case 4:
-                    lights[Light4].enabled = enable;
+                    lights[Light4].intensity = enable ? 1 : 0;
                     lights[Light4].color = color;
                     break;
             }

@@ -81,6 +81,7 @@ MonoBehaviour:
   - {fileID: 7753990609418065488}
   - {fileID: 3421841212159164954}
   TargetSide: 0
+  SpecialState: -1
   State: 0
 --- !u!1001 &4031313396793233768
 PrefabInstance:
@@ -634,6 +635,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7448004215011955261}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1280534248154082420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8546142428566158921, guid: 996534ba9fa568148bca7b29fc7c46e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7448004215011955261}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9189895279188207258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1789531382602216615, guid: 996534ba9fa568148bca7b29fc7c46e4,
@@ -649,12 +656,6 @@ GameObject:
 --- !u!1 &3421841212159164954 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5197279506408951847, guid: 996534ba9fa568148bca7b29fc7c46e4,
-    type: 3}
-  m_PrefabInstance: {fileID: 7448004215011955261}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1280534248154082420 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8546142428566158921, guid: 996534ba9fa568148bca7b29fc7c46e4,
     type: 3}
   m_PrefabInstance: {fileID: 7448004215011955261}
   m_PrefabAsset: {fileID: 0}

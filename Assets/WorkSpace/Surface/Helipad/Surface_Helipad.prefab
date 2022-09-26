@@ -1515,6 +1515,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 14
+  MovableObjects: []
+  ColorChangableObjects: []
 --- !u!114 &6207666371169326983
 MonoBehaviour:
   m_ObjectHideFlags: 0

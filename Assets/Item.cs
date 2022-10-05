@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Mistaken.UnityPrefabs
 {
+    [PublicAPI]
     public class Item : MonoBehaviour
     {
         public ItemType Type = ItemType.None;

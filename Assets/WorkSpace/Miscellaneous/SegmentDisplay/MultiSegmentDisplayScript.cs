@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Mistaken.UnityPrefabs.SegmentDisplay
 {
+    [PublicAPI]
     public class MultiSegmentDisplayScript : MonoBehaviour
     {
         public List<SegmentDisplayScript> segments = new List<SegmentDisplayScript>();
@@ -23,12 +25,6 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
         {
             if (CurrentText != DebugText)
                 SetText(DebugText);
-        }
-        [Obsolete]
-        public void SetNumber(ushort num)
-        {
-            SetText(num.ToString());
-            return;
         }
 
         public void SetText(string text)

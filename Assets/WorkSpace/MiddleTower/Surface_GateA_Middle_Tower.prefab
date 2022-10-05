@@ -9311,7 +9311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6652246539201642627
 Transform:
   m_ObjectHideFlags: 0
@@ -9355,7 +9355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df9c4068aa00e74288420e62c0c37b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawn: 1
+  Spawn: 0
   Room: 48
   MaxAmount: 1
   MinAmount: 0

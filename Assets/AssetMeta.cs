@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 
 namespace Mistaken.UnityPrefabs
 {
+    [PublicAPI]
     public class AssetMeta : MonoBehaviour
     {
         public AssetType Type = AssetType.UNKNOWN;
@@ -49,6 +51,8 @@ namespace Mistaken.UnityPrefabs
             RESPAWN_TIMER,
 
             LIGHT_TEST,
+
+            TURRET_TEST = 10000,
         }
     }
 }

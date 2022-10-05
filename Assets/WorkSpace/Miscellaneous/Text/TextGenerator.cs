@@ -2,10 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Mistaken.UnityPrefabs.Text
 {
+    [PublicAPI]
     public class TextGenerator : MonoBehaviour
     {
         [Multiline]
@@ -21,14 +23,8 @@ namespace Mistaken.UnityPrefabs.Text
 
         public event Action<TextGenerator> OnTextChanged
         {
-            add
-            {
-                onTextChanged += value;
-            }
-            remove
-            {
-                onTextChanged -= value;
-            }
+            add => onTextChanged += value;
+            remove => onTextChanged -= value;
         }
 
         private event Action<TextGenerator> onTextChanged;

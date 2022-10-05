@@ -2087,7 +2087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df9c4068aa00e74288420e62c0c37b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawn: 1
+  Spawn: 0
   Room: 33
   MaxAmount: 1
   MinAmount: 1

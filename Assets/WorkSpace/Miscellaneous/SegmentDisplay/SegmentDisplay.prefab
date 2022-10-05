@@ -123,7 +123,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 1
   m_Range: 0.14
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -215,7 +215,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 1
   m_Range: 0.14
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -307,7 +307,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 1
   m_Range: 0.14
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -479,7 +479,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 1
   m_Range: 0.14
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -571,7 +571,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 1
   m_Range: 0.14
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -743,7 +743,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 1
   m_Range: 0.14
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -835,7 +835,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 1
   m_Range: 0.14
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: -1
   MovableObjects: []
+  ColorChangableObjects: []
 --- !u!114 &-574452606614783516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,6 +73,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3639462654059867862}
     m_Modifications:
+    - target: {fileID: 3223323152867724735, guid: 7d089fc230cd78e42aa8f9bfe758b385,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374955579602244468, guid: 7d089fc230cd78e42aa8f9bfe758b385,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532340658963118259, guid: 7d089fc230cd78e42aa8f9bfe758b385,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 5899219528096419270, guid: 7d089fc230cd78e42aa8f9bfe758b385,
         type: 3}
       propertyPath: m_RootOrder
@@ -131,6 +147,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TCrossRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174668690852462911, guid: 7d089fc230cd78e42aa8f9bfe758b385,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174668691415523917, guid: 7d089fc230cd78e42aa8f9bfe758b385,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6569716810454000707, guid: 7d089fc230cd78e42aa8f9bfe758b385,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d089fc230cd78e42aa8f9bfe758b385, type: 3}

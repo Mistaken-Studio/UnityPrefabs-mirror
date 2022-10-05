@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.32916.344
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mistaken.UnityPrefabs", "Mistaken.UnityPrefabs.csproj", "{072A14A2-5C80-0640-E524-E0A38CA4CBB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorAssembly", "EditorAssembly.csproj", "{18D5C603-8C0B-DF37-5EA3-D6BFBC7857C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorAssembly", "EditorAssembly.csproj", "{162606F5-F2EB-EB78-1446-186E9A63DD4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,12 +17,15 @@ Global
 		{072A14A2-5C80-0640-E524-E0A38CA4CBB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{072A14A2-5C80-0640-E524-E0A38CA4CBB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{072A14A2-5C80-0640-E524-E0A38CA4CBB3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18D5C603-8C0B-DF37-5EA3-D6BFBC7857C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18D5C603-8C0B-DF37-5EA3-D6BFBC7857C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18D5C603-8C0B-DF37-5EA3-D6BFBC7857C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18D5C603-8C0B-DF37-5EA3-D6BFBC7857C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162606F5-F2EB-EB78-1446-186E9A63DD4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162606F5-F2EB-EB78-1446-186E9A63DD4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162606F5-F2EB-EB78-1446-186E9A63DD4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162606F5-F2EB-EB78-1446-186E9A63DD4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {340E90F4-FEFC-44CE-A3E4-7C48C4219DEE}
 	EndGlobalSection
 EndGlobal

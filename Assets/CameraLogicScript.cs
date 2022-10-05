@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using JetBrains.Annotations;
 using UnityEngine;
 
+[PublicAPI]
 public class CameraLogicScript : MonoBehaviour
 {
     public GameObject toFollow;
@@ -95,11 +97,11 @@ public class CameraLogicScript : MonoBehaviour
     }
 
 
-    private float rotAnim = 0;
-    private bool rev = false;
-    private bool isLockedOn = false;
+    private float rotAnim;
+    private bool rev;
+    private bool isLockedOn;
 
-    private float uselessDebug = 0;
+    private float uselessDebug;
     private void FixedUpdate()
     {
         if (toFollow != null)

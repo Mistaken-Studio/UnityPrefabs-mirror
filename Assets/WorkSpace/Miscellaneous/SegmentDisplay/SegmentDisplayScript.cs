@@ -1,26 +1,27 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Mistaken.UnityPrefabs.SegmentDisplay
 {
+    [PublicAPI]
     public class SegmentDisplayScript : MonoBehaviour
     {
         public Color EnabledColor;
         public Color DisabledColor;
 
-        public MeshRenderer TopSegment;
-        public MeshRenderer LeftTopSegment;
-        public MeshRenderer RightTopSegment;
-        public MeshRenderer MiddleSegment;
-        public MeshRenderer LeftBottomSegment;
-        public MeshRenderer RightBottomSegment;
-        public MeshRenderer BottomSegment;
+        [SerializeField] private MeshRenderer TopSegment;
+        [SerializeField] private MeshRenderer LeftTopSegment;
+        [SerializeField] private MeshRenderer RightTopSegment;
+        [SerializeField] private MeshRenderer MiddleSegment;
+        [SerializeField] private MeshRenderer LeftBottomSegment;
+        [SerializeField] private MeshRenderer RightBottomSegment;
+        [SerializeField] private MeshRenderer BottomSegment;
 
         private readonly Dictionary<MeshRenderer, Light> Lights = new Dictionary<MeshRenderer, Light>();
 
-        static Dictionary<DisplaySegmentChars, bool[]> Chars = new Dictionary<DisplaySegmentChars, bool[]>()
+        private static readonly Dictionary<DisplaySegmentChars, bool[]> Chars = new Dictionary<DisplaySegmentChars, bool[]>()
         {
             {
                 DisplaySegmentChars.A, new bool[]
@@ -28,7 +29,7 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
                     true,
                     true, true,
                     true,
-                    true,true,
+                    true, true,
                     false
                 }
             },
@@ -38,7 +39,7 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
                     false,
                     true, false,
                     true,
-                    true,true,
+                    true, true,
                     true
                 }
             },
@@ -48,7 +49,7 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
                     true,
                     true, false,
                     false,
-                    true,false,
+                    true, false,
                     true
                 }
             },
@@ -58,7 +59,7 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
                     false,
                     false, true,
                     true,
-                    true,true,
+                    true, true,
                     true
                 }
             },
@@ -68,7 +69,7 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
                     true,
                     true, false,
                     true,
-                    true,false,
+                    true, false,
                     true
                 }
             },
@@ -343,9 +344,15 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
                 }
             }
         };
-        
+
+        private DisplaySegmentChars currentChar = DisplaySegmentChars.SPACE;
+
         public void SetChar(DisplaySegmentChars character)
         {
+            if (currentChar == character)
+                return;
+
+            currentChar = character;
             var colors = Chars[character];
             SetColor(TopSegment, colors[0] ? EnabledColor : DisabledColor);
             SetColor(LeftTopSegment, colors[1] ? EnabledColor : DisabledColor);
@@ -354,7 +361,6 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
             SetColor(LeftBottomSegment, colors[4] ? EnabledColor : DisabledColor);
             SetColor(RightBottomSegment, colors[5] ? EnabledColor : DisabledColor);
             SetColor(BottomSegment, colors[6] ? EnabledColor : DisabledColor);
-            colors = null;
         }
 
         public bool TrySetChar(char character)
@@ -398,18 +404,19 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
                     SetChar(DisplaySegmentChars.DASH);
                     return true;
             }
-            if(Enum.TryParse<DisplaySegmentChars>(character.ToString(), true, out var chara))
-            {
-                SetChar(chara);
-                return true;
-            }
-            return false;
+
+            if (!Enum.TryParse<DisplaySegmentChars>(character.ToString(), true, out var displaySegmentChars))
+                return false;
+
+            SetChar(displaySegmentChars);
+            return true;
         }
 
         public void SetChar(char character)
         {
-            if(!TrySetChar(character))
-                throw new ArgumentOutOfRangeException(nameof(character),"Cannot display this char on 7-segment display");
+            if (!TrySetChar(character))
+                throw new ArgumentOutOfRangeException(nameof(character),
+                    "Cannot display this char on 7-segment display");
         }
 
         public void SetColor(MeshRenderer obj, Color color)

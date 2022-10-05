@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Mistaken.UnityPrefabs.Misc
 {
+    [PublicAPI]
     public class ElectricalBoxScript : MonoBehaviour
     {
         public MeshRenderer Light1;
@@ -11,15 +13,15 @@ namespace Mistaken.UnityPrefabs.Misc
         public MeshRenderer Light3;
         public MeshRenderer Light4;
 
-        private readonly Dictionary<MeshRenderer, Light> lights = new Dictionary<MeshRenderer, Light>();
+        private readonly Dictionary<MeshRenderer, UnityEngine.Light> lights = new Dictionary<MeshRenderer, UnityEngine.Light>();
 
         // Start is called before the first frame update
         void Start()
         {
-            lights[Light1] = Light1.GetComponentInChildren<Light>();
-            lights[Light2] = Light2.GetComponentInChildren<Light>();
-            lights[Light3] = Light3.GetComponentInChildren<Light>();
-            lights[Light4] = Light4.GetComponentInChildren<Light>();
+            lights[Light1] = Light1.GetComponentInChildren<UnityEngine.Light>();
+            lights[Light2] = Light2.GetComponentInChildren<UnityEngine.Light>();
+            lights[Light3] = Light3.GetComponentInChildren<UnityEngine.Light>();
+            lights[Light4] = Light4.GetComponentInChildren<UnityEngine.Light>();
 
             SetStatus(1, new Color(0, 0, 0, 0));
             SetStatus(2, new Color(0, 0, 0, 0));

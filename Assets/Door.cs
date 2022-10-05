@@ -1,8 +1,10 @@
 ﻿using System;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Mistaken.UnityPrefabs
 {
+    [PublicAPI]
     public class Door : MonoBehaviour
     {
         public bool DefaultState;

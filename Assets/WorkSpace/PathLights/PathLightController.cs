@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Mistaken.UnityPrefabs.PathLights
 {
+    [PublicAPI]
     public class PathLightController : MonoBehaviour
     {
         public List<GameObject> PlusX_Lights = new List<GameObject>();
@@ -29,7 +31,7 @@ namespace Mistaken.UnityPrefabs.PathLights
 #endif*/
         }
 
-        private bool destroyed = false;
+        private bool destroyed;
         void OnDestroy()
         {
             destroyed = true;
@@ -129,23 +131,28 @@ namespace Mistaken.UnityPrefabs.PathLights
 
         public void SetTargetSide(Side targetSide)
         {
-            if (targetSide == Side.NONE)
+            switch (targetSide)
             {
-                TargetSide = Side.NONE;
-                DisableAll(false);
-                return;
-            }
-            else if (targetSide == Side.SPECIAL)
-            {
-                TargetSide = SpecialState;
-                return;
+                case Side.NONE:
+                    TargetSide = Side.NONE;
+                    DisableAll(false);
+                    return;
+                case Side.SPECIAL:
+                    TargetSide = SpecialState;
+                    return;
             }
 
             (float, Side) max = (float.MaxValue, Side.PLUS_X);
 
-            var test = new GameObject();
-            test.transform.parent = this.transform;
-            test.transform.localPosition = Vector3.zero;
+            var test = new GameObject
+            {
+                transform =
+                {
+                    parent = this.transform,
+                    localPosition = Vector3.zero
+                }
+            };
+
             switch (targetSide)
             {
                 case Side.PLUS_X:
@@ -260,15 +267,13 @@ namespace Mistaken.UnityPrefabs.PathLights
             MINUS_X,
             MINUS_Z,
 
-            [System.Obsolete("Use NONE")]
-            CENTER = -1,
             NONE = -1,
             SPECIAL = -2,
         }
 
         public Side TargetSide;
         public Side SpecialState = Side.NONE;
-        public int State = 0;
+        public int State;
 
         public IEnumerable<GameObject[]> GenerateList(
             IEnumerable<GameObject> startList1,

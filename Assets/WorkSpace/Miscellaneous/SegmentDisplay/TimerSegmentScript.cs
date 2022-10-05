@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Mistaken.UnityPrefabs.SegmentDisplay
 {
+    [PublicAPI]
     public class TimerSegmentScript : MultiSegmentDisplayScript
     {
         public int Counter;
@@ -26,7 +28,7 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
 
         private IEnumerator CentralLoop()
         {
-            bool enable = true;
+            var enable = true;
             while (true)
             {
                 foreach (var item in CenterLights)
@@ -66,8 +68,8 @@ namespace Mistaken.UnityPrefabs.SegmentDisplay
 
         public void SetDisplayTime(int seconds)
         {
-            int second = seconds % 60;
-            int minute = (seconds - second) / 60;
+            var second = seconds % 60;
+            var minute = (seconds - second) / 60;
             this.SetText(minute.ToString("00") + second.ToString("00"));
         }
     }

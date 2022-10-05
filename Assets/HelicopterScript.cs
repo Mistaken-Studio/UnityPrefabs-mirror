@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
+[PublicAPI]
 public class HelicopterScript : MonoBehaviour
 {
     private Animator animator;

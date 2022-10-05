@@ -46,7 +46,6 @@ MonoBehaviour:
   DebugText: 
   VerticalDistance: 2
   HorizontalDistance: 1
-  TextColor: {r: 0, g: 0, b: 0, a: 1}
   Characters:
   - character: 65
     prefab: {fileID: 5954110666432825408, guid: 3dfee09772d289c449baf92d5ca30e17,

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,14 +47,18 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.11</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.16</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2019.4.33f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="B:\VS2022\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\AnimatorTrigger.cs" />
     <Compile Include="Assets\AssetMeta.cs" />
+    <Compile Include="Assets\CameraLogicScript.cs" />
     <Compile Include="Assets\DisableAnimatorScript.cs" />
     <Compile Include="Assets\DisplayScript.cs" />
     <Compile Include="Assets\Door.cs" />
@@ -64,11 +68,13 @@
     <Compile Include="Assets\Item.cs" />
     <Compile Include="Assets\ScriptTrigger.cs" />
     <Compile Include="Assets\SpawnRule.cs" />
+    <Compile Include="Assets\WorkSpace\Miscellaneous\Light\LightObjectScript.cs" />
     <Compile Include="Assets\WorkSpace\Miscellaneous\SegmentDisplay\MultiSegmentDisplayScript.cs" />
     <Compile Include="Assets\WorkSpace\Miscellaneous\SegmentDisplay\SegmentDisplayScript.cs" />
     <Compile Include="Assets\WorkSpace\Miscellaneous\SegmentDisplay\TimerSegmentScript.cs" />
     <Compile Include="Assets\WorkSpace\Miscellaneous\Text\TextGenerator.cs" />
     <Compile Include="Assets\WorkSpace\PathLights\PathLightController.cs" />
+    <Compile Include="Assets\WorkSpace\WaitingForPlayersRoom\WaitingForPlayersRoomScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mistaken.UnityPrefabs.asmdef" />
@@ -270,16 +276,16 @@
       <HintPath>B:\UnityHub\Unity\2019.4.33f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.14.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.14.18\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.14.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.14.18\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.14.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.14.18\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.14.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.14.18\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>B:\UnityHub\Unity\2019.4.33f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>

@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Mistaken.UnityPrefabs
 {
+    [PublicAPI]
     [RequireComponent(typeof(AssetMeta))]
     public class SpawnRule : MonoBehaviour
     {

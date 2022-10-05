@@ -280,7 +280,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b23a9b70639b9994288ea8795ca2e2ad, type: 2}
+  - {fileID: 2100000, guid: 1216b6745a9778c46b5073167ab53a66, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -437,10 +437,20 @@ PrefabInstance:
       propertyPath: Type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3702939812009055942, guid: 2b415c11d774c4345901f9d480f21444,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4531050106264301183, guid: 2b415c11d774c4345901f9d480f21444,
         type: 3}
       propertyPath: m_Name
       value: Surface_GateB_Bridge_Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346317553955464017, guid: 2b415c11d774c4345901f9d480f21444,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7727422649958590428, guid: 2b415c11d774c4345901f9d480f21444,
         type: 3}

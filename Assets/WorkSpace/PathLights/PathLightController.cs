@@ -4,6 +4,10 @@ using System.Linq;
 using JetBrains.Annotations;
 using UnityEngine;
 
+// ReSharper disable ParameterHidesMember
+// ReSharper disable LocalVariableHidesMember
+// ReSharper disable InconsistentNaming
+// ReSharper disable once CheckNamespace
 namespace Mistaken.UnityPrefabs.PathLights
 {
     [PublicAPI]
@@ -21,8 +25,7 @@ namespace Mistaken.UnityPrefabs.PathLights
         public List<GameObject> MinusX_MinusZ_Lights = new List<GameObject>();
         public List<GameObject> PlusZ_MinusZ_Lights = new List<GameObject>();
 
-        // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             DisableAll(true);
 
@@ -32,7 +35,7 @@ namespace Mistaken.UnityPrefabs.PathLights
         }
 
         private bool destroyed;
-        void OnDestroy()
+        private void OnDestroy()
         {
             destroyed = true;
         }
@@ -41,36 +44,45 @@ namespace Mistaken.UnityPrefabs.PathLights
         {
             State = 0;
 
-            foreach (var light in PlusX_Lights)
+            foreach (var light in GetAllLights)
                 SetStatus(light, false, force);
+        }
 
-            foreach (var light in PlusZ_Lights)
-                SetStatus(light, false, force);
+        private IEnumerable<GameObject> GetAllLights
+        {
+            get
+            {
+                foreach (var light in PlusX_Lights)
+                    yield return light;
 
-            foreach (var light in MinusX_Lights)
-                SetStatus(light, false, force);
+                foreach (var light in PlusZ_Lights)
+                    yield return light;
 
-            foreach (var light in MinusZ_Lights)
-                SetStatus(light, false, force);
+                foreach (var light in MinusX_Lights)
+                    yield return light;
+
+                foreach (var light in MinusZ_Lights)
+                    yield return light;
 
 
-            foreach (var light in PlusX_MinusZ_Lights)
-                SetStatus(light, false, force);
+                foreach (var light in PlusX_MinusZ_Lights)
+                    yield return light;
 
-            foreach (var light in PlusX_PlusZ_Lights)
-                SetStatus(light, false, force);
+                foreach (var light in PlusX_PlusZ_Lights)
+                    yield return light;
 
-            foreach (var light in PlusX_MinusX_Lights)
-                SetStatus(light, false, force);
+                foreach (var light in PlusX_MinusX_Lights)
+                    yield return light;
 
-            foreach (var light in MinusX_PlusZ_Lights)
-                SetStatus(light, false, force);
+                foreach (var light in MinusX_PlusZ_Lights)
+                    yield return light;
 
-            foreach (var light in MinusX_MinusZ_Lights)
-                SetStatus(light, false, force);
+                foreach (var light in MinusX_MinusZ_Lights)
+                    yield return light;
 
-            foreach (var light in PlusZ_MinusZ_Lights)
-                SetStatus(light, false, force);
+                foreach (var light in PlusZ_MinusZ_Lights)
+                    yield return light;
+            }
         }
 
         private void SetStatus(GameObject light, bool value, bool force = false)
@@ -90,13 +102,21 @@ namespace Mistaken.UnityPrefabs.PathLights
         private const int FadoutTicks = 15;
 
         private readonly Dictionary<GameObject, Light[]> Lights = new Dictionary<GameObject, Light[]>();
+
+        private Light[] GetLightCache(GameObject obj)
+        {
+            if (Lights.TryGetValue(obj, out var light))
+                return light;
+
+            light = obj.GetComponentsInChildren<Light>();
+            Lights[obj] = light;
+
+            return light;
+        }
+
         private IEnumerator _setStatus(GameObject light, bool value, bool force = false)
         {
-            if (!Lights.TryGetValue(light, out var lightC))
-            {
-                lightC = light.GetComponentsInChildren<Light>();
-                Lights[light] = lightC;
-            }
+            var lightC = GetLightCache(light);
 
             if ((lightC?.Length ?? 0) == 0)
                 yield break;
@@ -104,29 +124,30 @@ namespace Mistaken.UnityPrefabs.PathLights
             foreach (var item in lightC)
             {
                 if (value)
-                {
                     item.intensity = 1;
-                }
                 else if (force)
-                {
                     item.intensity = 0;
-                }
             }
-            if (!value)
+
+            if (value)
+                yield break;
+
+            for (float i = 0; i < 1; i += 1f / FadoutTicks)
             {
-                for (float i = 0; i < 1; i += 1f / FadoutTicks)
-                {
-                    foreach (var item in lightC)
-                        item.intensity -= 1f / FadoutTicks;
-
-                    yield return new WaitForSeconds(1f / FadoutTicks);
-                }
-
                 foreach (var item in lightC)
-                {
-                    item.intensity = 0;
-                }
+                    item.intensity -= 1f / FadoutTicks;
+
+                yield return new WaitForSeconds(1f / FadoutTicks);
             }
+
+            foreach (var item in lightC)
+                item.intensity = 0;
+        }
+
+        public void SetColor(Color color)
+        {
+            foreach (var light in GetAllLights.SelectMany(GetLightCache))
+                light.color = color;
         }
 
         public void SetTargetSide(Side targetSide)
@@ -210,38 +231,39 @@ namespace Mistaken.UnityPrefabs.PathLights
 
         public float DoAnimationSingleCycle()
         {
-            GameObject[][] plusX = PlusX.ToArray();
-            GameObject[][] minusX = MinusX.ToArray();
-            GameObject[][] plusZ = PlusZ.ToArray();
-            GameObject[][] minusZ = MinusZ.ToArray();
-
             GameObject[][] list;
             switch (TargetSide)
             {
                 case Side.PLUS_X:
+                    var plusX = PlusX.ToArray();
                     if (plusX.Length == 0)
                         return 0;
                     list = plusX;
                     break;
 
                 case Side.MINUS_X:
+                    var minusX = MinusX.ToArray();
                     if (minusX.Length == 0)
                         return 0;
                     list = minusX;
                     break;
 
                 case Side.PLUS_Z:
+                    var plusZ = PlusZ.ToArray();
                     if (plusZ.Length == 0)
                         return 0;
                     list = plusZ;
                     break;
 
                 case Side.MINUS_Z:
+                    var minusZ = MinusZ.ToArray();
                     if (minusZ.Length == 0)
                         return 0;
                     list = minusZ;
                     break;
 
+                case Side.NONE:
+                case Side.SPECIAL:
                 default:
                     return 2;
             }
@@ -287,50 +309,58 @@ namespace Mistaken.UnityPrefabs.PathLights
             IEnumerable<GameObject> endList
             )
         {
-            var endListLength = endList.Count();
+            var endListArray = endList.ToArray();
+            var endListLength = endListArray.Length;
 
             if (endListLength == 0)
                 yield break;
 
-            var startList1Length = startList1.Count();
-            var startList2Length = startList2.Count();
-            var startList3Length = startList3.Count();
+            var startList1Array = startList1.ToArray();
+            var startList1Length = startList1Array.Length;
+            var startList2Array = startList2.ToArray();
+            var startList2Length = startList2Array.Length;
+            var startList3Array = startList3.ToArray();
+            var startList3Length = startList3Array.Length;
 
-            var middleList1Length = middleList1.Count();
-            var middleList2Length = middleList2.Count();
-            var middleList3Length = middleList3.Count();
+            var middleList1Array = middleList1.ToArray();
+            var middleList1Length = middleList1Array.Length;
+            var middleList2Array = middleList2.ToArray();
+            var middleList2Length = middleList2Array.Length;
+            var middleList3Array = middleList3.ToArray();
+            var middleList3Length = middleList3Array.Length;
 
             List<GameObject> tmp = new List<GameObject>();
 
-            for (int i = 0; i < Mathf.Max(Mathf.Max(startList1Length, startList2Length), startList3Length); i++)
+            for (var i = 0; i < Mathf.Max(Mathf.Max(startList1Length, startList2Length), startList3Length); i++)
             {
                 if (startList1Length > i)
-                    tmp.Add(startList1.ElementAt(i));
+                    tmp.Add(startList1Array[i]);
                 if (startList2Length > i)
-                    tmp.Add(startList2.ElementAt(i));
+                    tmp.Add(startList2Array[i]);
                 if (startList3Length > i)
-                    tmp.Add(startList3.ElementAt(i));
+                    tmp.Add(startList3Array[i]);
                 yield return tmp.ToArray();
                 tmp.Clear();
             }
 
-            for (int i = 0; i < Mathf.Max(Mathf.Max(middleList1Length, middleList2Length), middleList3Length); i++)
+            for (var i = 0; i < Mathf.Max(Mathf.Max(middleList1Length, middleList2Length), middleList3Length); i++)
             {
                 if (middleList1Length > i)
-                    tmp.Add(middleList1.ElementAt(i));
+                    tmp.Add(middleList1Array[i]);
                 if (middleList2Length > i)
-                    tmp.Add(middleList2.ElementAt(i));
+                    tmp.Add(middleList2Array[i]);
                 if (middleList3Length > i)
-                    tmp.Add(middleList3.ElementAt(i));
+                    tmp.Add(middleList3Array[i]);
                 yield return tmp.ToArray();
                 tmp.Clear();
             }
 
-            for (int i = endListLength - 1; i >= 0; i--)
-                yield return new GameObject[] { endList.ElementAt(i) };
+            foreach (var item in endListArray.Reverse())
+                yield return new[] { item };
         }
 
-        public IEnumerable<GameObject[]> PlusX => GenerateList(
+        private GameObject[][] plusX;
+        public GameObject[][] PlusX => plusX ?? (plusX = GenerateList(
             PlusZ_Lights,
             MinusZ_Lights,
             MinusX_Lights,
@@ -340,9 +370,10 @@ namespace Mistaken.UnityPrefabs.PathLights
             PlusX_MinusX_Lights,
 
             PlusX_Lights
-            );
+            ).ToArray());
 
-        public IEnumerable<GameObject[]> MinusX => GenerateList(
+        private GameObject[][] minusX;
+        public GameObject[][] MinusX => minusX ?? (minusX = GenerateList(
             PlusZ_Lights,
             MinusZ_Lights,
             PlusX_Lights,
@@ -352,9 +383,10 @@ namespace Mistaken.UnityPrefabs.PathLights
             PlusX_MinusX_Lights.Reverse<GameObject>(),
 
             MinusX_Lights
-            );
+            ).ToArray());
 
-        public IEnumerable<GameObject[]> PlusZ => GenerateList(
+        private GameObject[][] plusZ;
+        public GameObject[][] PlusZ => plusZ ?? (plusZ = GenerateList(
             MinusX_Lights,
             MinusZ_Lights,
             PlusX_Lights,
@@ -364,9 +396,11 @@ namespace Mistaken.UnityPrefabs.PathLights
             PlusZ_MinusZ_Lights,
 
             PlusZ_Lights
-            );
+            ).ToArray());
 
-        public IEnumerable<GameObject[]> MinusZ => GenerateList(
+        private GameObject[][] minusZ;
+
+        public GameObject[][] MinusZ => minusZ ?? (minusZ = GenerateList(
             MinusX_Lights,
             PlusZ_Lights,
             PlusX_Lights,
@@ -376,6 +410,6 @@ namespace Mistaken.UnityPrefabs.PathLights
             PlusZ_MinusZ_Lights.Reverse<GameObject>(),
 
             MinusZ_Lights
-            );
+        ).ToArray());
     }
 }
